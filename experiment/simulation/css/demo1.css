@@ -1,0 +1,129 @@
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;   
+}
+
+/** JSPLUMB ARTEFACTS **/
+.jtk-overlay {
+    z-index: 51;
+}
+
+.jtk-endpoint {
+    z-index: 50;
+    cursor: move;
+}
+
+.jtk-connector {
+    z-index: 1;
+}
+
+/** ELEMENTS **/
+.littledot
+{
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+  
+    z-index: 5;
+    position: absolute;
+    border-radius: 31px;
+}
+
+
+.littledot-hover-hover {
+    border: 2px solid orange;
+}
+
+.dropHover {
+    border: 1px solid orange;
+}
+.button{
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/** ELEMENT POSITIONS **/
+#ld1 {
+    margin-top: 210px;
+    margin-left: 935px;
+    
+}
+
+#ld2 {
+    margin-top: 210px;
+    margin-left: 965px;
+}
+
+/* #ld3 {
+    top: 34.5em;
+    left: 10.6em;
+}
+
+#ld4 {
+    top: 34.5em;
+    left: 15.7em;
+} */
+
+#ld5 {
+    margin-top: 150px;
+    margin-left: 750px;
+    
+}
+#ld6 {
+    margin-top: 220px;
+    margin-left: 750px;
+}
+/* #ld7 {
+    top: 16.7em;
+    left: 41.5em;
+}
+#ld8 {
+    top: 22em;
+    left: 36.2em;
+}
+#ld9 {
+    top: 10.8em;
+    left: 36em;
+} */
+#ld10 {
+    margin-top: 125px;
+    margin-left: 65px;
+}
+#ld11 {
+    margin-top: 125px;
+    margin-left: 105px;
+}
+#ld12 {
+    margin-top: 160px;
+    margin-left: 360px;
+}
+#ld13 {
+    margin-top: 205px;
+    margin-left: 360px;
+}
+
+/* #ld14 {
+    top: 19.5em;
+    left: 12em;
+}
+#ld15 {
+    top: 19.5em;
+    left: 17em;
+} */
+
+
+path, .jtk-endpoint {
+    cursor: pointer;
+}
+
+#canvas{
+    color: #4CAF50;
+}
