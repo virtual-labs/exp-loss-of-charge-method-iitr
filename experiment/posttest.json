@@ -1,39 +1,5 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[{"question":"High resistance refers to?","answers":{"a":"Less than 1&#8486;","b":"More than 100K&#8486;","c":"1&#8486 to 100K&#8486;","d":"None of the above"},"correctAnswer":"b"},
+{"question":"An electrostatic voltmeter of infinite resistance is connected between the cable conductor such that joint capacitance is 500µF. If the voltage falls from 400V to 100V in one minute then the insulation resistance of the cable will be?","answers":{"a":"70K&#8486","b":"55K&#8486","c":"42K&#8486","d":"87K&#8486"},"correctAnswer":"d"},
+{"question":"Which of the following method is used for the measurement of Medium Resistance?","answers":{"a":"Kelvin’s double bridge method","b":"Direct-Deflection method","c":"Carey-Foster bridge method","d":"Anderson Bridge"},"correctAnswer":"c"},
+{"question":"A capacitor is connected to a battery, The force of attraction between the plates when the separation between them is halved?","answers":{"a":"4 times","b":"8 times","c":"2 times","d":"remains the same"},"correctAnswer":"a"},
+{"question":"When Using multimeter, applied voltage is to be disconnected from the circuit because?","answers":{"a":"Voltage source will increase resistance","b":"Current will decrease resistance","c":"The multimeter has its own internal battery","d":"None of the above"},"correctAnswer":"c"}]
