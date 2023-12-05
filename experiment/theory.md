@@ -14,7 +14,7 @@ The Loss of Charge Method is used to measure resistance greater than 100KΩ or 0
 
 <center>
 
-<img src="images/ckt.jpg" height="250" style="-webkit-filter: grayscale(100%);">  
+<img src="images/Ckt.jpg" height="250" style="-webkit-filter: grayscale(100%);">  
 
 **Fig. 1 Loss of Charge Method**
 </center>
