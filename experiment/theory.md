@@ -1,4 +1,13 @@
-## Introduction
+<head>
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> 
+  
+</script>
+
+</head>
+
+
+### Introduction
 
 <div style="text-align: justify; font-size: 18px;font-family: 'Nunito Sans',sans-serif;">
 The Loss of Charge Method is used to measure resistance greater than 100KΩ or 0.1MΩ. The drawback of the Wheatstone bridge is that it cannot be used to measure the high value of resistance of the order of 1MΩ because of the reduction in the sensitivity to unbalance caused by the high resistance values. Also, the high resistance measurements are inaccurate due to leakage over the insulation of the bridge arms.<br>
@@ -37,13 +46,13 @@ If V<sub>c</sub> be the terminal voltage of the capacitor consisting of capacita
 
 <center>
 
-$i = -\frac{dQ}{dt} = -\frac{d(CV_c)}{dt} = -C\frac{dV_c}{dt}..... (1)$
+$$i = -\frac{dQ}{dt} = -\frac{d(CV_c)}{dt} = -C\frac{dV_c}{dt}..... (1)$$
 
 </center>
 
 <center>
 
-$i = \frac{V_c}{R}....... (2)$
+$$i = \frac{V_c}{R}....... (2)$$
 
 </center>
 
@@ -51,13 +60,13 @@ Equating equations 1 and 2, we get,<br>
 
 <center>
 
-$\frac{V_c}{R} = -C\frac{dV_c}{dt}$
+$$\frac{V_c}{R} = -C\frac{dV_c}{dt}$$
 
 </center>
 
 <center>
 
-$\frac{dV_c}{V_c} = -\frac{1}{CR}dt$
+$$\frac{dV_c}{V_c} = -\frac{1}{CR}dt$$
 
 </center>
 
@@ -65,7 +74,7 @@ Applying integration on both sides, We get,
 
 <center>
 
-$lnV_c = -\frac{1}{CR} + lnA$
+$$lnV_c = -\frac{1}{CR} + lnA$$
 
 </center>
 
@@ -75,25 +84,25 @@ Applying initial conditions to the above equation. At t = 0, V<sub>c</sub> = V i
 
 <center>
 
-$A = V$
+$$A = V$$
 
 </center>
 
 <center>
 
-$lnV_c = lnV - \frac{1}{CR}$
+$$lnV_c = lnV - \frac{1}{CR}$$
 
 </center>
 
 <center>
 
-$\frac{1}{CR} = ln\left (\frac{V}{Vc}\right )$
+$$\frac{1}{CR} = ln\left (\frac{V}{Vc}\right )$$
 
 </center>
 
 <center>
 
-$R = \frac{1}{Cln\left (\frac{V}{V_c}\right )} = \frac{0.434t}{Clog\left (\frac{V}{V_c}\right )}$
+$$R = \frac{1}{Cln\left (\frac{V}{V_c}\right )} = \frac{0.434t}{Clog\left (\frac{V}{V_c}\right )}$$
 
 </center>
 
