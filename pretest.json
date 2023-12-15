@@ -1,0 +1,5 @@
+[{"question":"Which one of the following is measured by the loss of charge method?","answers":{"a":"Low Resistance","b":"High Resistance","c":"Medium Resistance","d":"Very Low Resistance"},"correctAnswer":"b"},
+{"question":"Which amplifier is used in an electronic multimeter?","answers":{"a":"Differential Amplifier","b":"Power Amplifier","c":"Buffer Amplifier","d":"Wideband Amplifier"},"correctAnswer":"a"},
+{"question":"Which of the following is used to measure the leakage resistance of a capacitor?","answers":{"a":"Wein's Bridge","b":"Megger","c":"Loss of Charge Method","d":"None of the above"},"correctAnswer":"c"},
+{"question":"A multimeter is used for the measurement of the following?","answers":{"a":"1, 2 and 4","b":"1, 2 and 5","c":"1, 3 and 5","d":"1, 2 and 3"},"correctAnswer":"d"},
+{"question":"What effect will be on the capacitance of a capacitor when the area of the parallel plate capacitor is decreased?","answers":{"a":"It will increase","b":"It will decrease","c":"There will be no effect","d":"It will initially increase and then decrease"},"correctAnswer":"b"}]
