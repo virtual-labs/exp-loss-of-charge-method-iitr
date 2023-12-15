@@ -1,5 +1,3 @@
-## Procedure<br>
-    
 **STEP 1 :** Make Connections as per the instructions given below:</p>
         <p><b>1.</b>&nbsp; &nbsp; <b>P<sub>1</sub></b> of Power supply - <b>P<sub>3</sub></b> of Circuit Diagram</p> 
         <p><b>2.</b>&nbsp; &nbsp; <b>P<sub>2</sub></b> of Power supply - <b>P<sub>4</sub></b> of Circuit Diagram</p>
