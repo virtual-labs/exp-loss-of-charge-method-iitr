@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>Virtual Labs | Loss Charge Method</title>
+	 <link rel="stylesheet" type="text/css" href="css/main.css">
+
+     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+        <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="css/demo1.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+        <link rel="icon" href="./images/Vlab logo.jpg" type="image/x-icon">
+       
+</head>
+<body>
+
+<div class="box" style="position:absolute;">
+		<div class="container1" style="position:absolute;">
+			<img src="images\Logo.png" width="95px" height="92.5px" style="margin-left: 5px; float: left;" >
+			<center><h2 >Virtual Labs IIT Roorkee<br>Electrical Measurement Laboratory<br></h2>
+			<h2 style="background-color: black;">Measurement of High Resistance Using Loss of Charge Method</h2></center></div>
+			<div style="position: relative; margin-top: 100px;"><br>
+      </div>
+       
+      <!--kit code-->
+      <div class="container2" style="position:absolute;">
+
+       <!--PowerSupply code-->
+       
+       <img src="images\PowerSupplyOff.png"  alt="" width="225px" height="140px" style="margin-left:16px; margin-top:15px; position:absolute;" disabled="true" id="ps";>
+       <input type="range" disabled="true" id="PSval" name="PSval" value="0" min="0" max="30" step="1">
+       <input type="text" disabled="true" class="PSdisplay" id="PSdis" value="0 V">
+       <button style="cursor: pointer;" id="pow-start" > </button>
+       <p style="position:absolute; color: white; margin-left:50px; margin-top: 31px; font-size: 14px;">DC POWER SUPPLY</p>
+      
+
+        <!--Instruction button-->
+      <div class="dropdown">
+  			<button class="dropbtn">INSTRUCTIONS</button>
+  			<div class="dropdown-content">
+   				<b><p>STEP 1  : Make Connections as per the instructions given below:</p></b>                 
+           <p>1.&nbsp &nbsp P<sub>1</sub> of Power supply - P<sub>3</sub> of Circuit Diagram</p>
+           <p>2.&nbsp &nbsp P<sub>2</sub> of Power supply - P<sub>4</sub> of Circuit Diagram</p>
+           <p>3.&nbsp &nbsp M<sub>1</sub> of Multimeter - M<sub>3</sub> of Circuit Diagram</p>
+           <p>4.&nbsp &nbsp M<sub>2</sub> of Multimeter - M<sub>4</sub> of Circuit Diagram</p>
+         
+           <b><p>NOTE : If wire is wrongly connected, Click on node number to detach the wire.</p></b>
+                      
+          <b><p>STEP 2  :</b> Click on <b>"CHECK"</b> Button for checking the connections. &nbsp &nbsp</p> 
+          <b><p>STEP 3  :</b> Turn ON Power supply by clicking on the Power button and set the voltage to 30V.</p>
+          <b><p>STEP 4  :</b> Turn ON Switch 1 for charging the capacitor.</p>
+          
+          <b><p>STEP 5  :</b> Now, Turn ON Switch 2 for discharging the capacitor.</p>
+          <b><p>STEP 6  :</b> Click on <b>"START"</b> Button to start the Timer & readings will add to the table automatically until the timer stops.</p>
+          <b><p>STEP 7  :</b> Click on <b>"PLOT"</b> Button to plot the graph.</p>
+          <b><p>STEP 8  :</b> Click on <b>"PRINT"</b> Button to print the webpage.</p>
+          <b><p>STEP 9  :</b> Click on <b>"RESET"</b> Button to refresh the webpage.</p>
+        </div>
+		</div>
+
+		<!--buttons code-->
+
+    <div class="btn" style="position:absolute; margin-left: 175px;">
+		<input type="button" value="CHECK" class="check" id="check-button" style="position:absolute; top:525px;left:570px;">
+		<input type="button" value="PLOT" id="plot" style="position:absolute; top: 525px;left:0px;" onclick="plot()">
+		<input type="button" value="RESET" id="reset" id="button"   style="position:absolute; top:525px;left:390px;" onclick="window.location.href = 'index.html';">
+    <input type="button" value="PRINT" id="print" style="position:absolute; top:525px;left:755px" onclick="window.print()">
+    </div>
+
+		<!--Formula code-->
+		<div class="formula" style="position:absolute;">
+      <center><h2><u>FORMULA</u></h2></center>
+      <div><p>1.&nbsp Find R (High Resistance)  </p>
+        <p>&nbsp&nbsp&nbsp&nbsp &nbsp `R` = `(0.434t)/(Clog(V/v))` , C = 330&#181F</p>
+        Where, V = Maximum&nbspCharging&nbspVoltage(30V)<br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  v = Discharging Voltage     
+    </div>
+  </div>
+
+		<!--table code-->
+    <div class="otable" > 
+      
+      <div style="margin-top: 255px; margin-left: -1150px; position:absolute;">  
+        <h3 style="position:absolute; margin-top: -278px; margin-left: 1065px; ">OBSERVATION TABLE</h3>
+			<table class="a" id="tb1" style="margin-left: 1050px;">
+  			<tbody>
+				<tr>
+          <th>S.No.</th>
+          <th>Time (Sec)</th>
+          <th>Voltage (v)</th>
+          <th>log(V/v)</th>
+          <th>R (M&#8486)</th>
+        
+        </tr>
+  			</tbody>
+			</table>
+		</div>
+	<!-- Resistance Value  -->
+    <div id="Res"></div>
+  </div>
+      
+	</div>
+  <center><div class="copyright" style="position:absolute">&#169 2022 Virtual Labs, IIT Roorkee</div></center>
+  </div>
+
+<br><br>
+
+        <!-- Circuit -->
+        <div class="circuit">
+        <img style="position: absolute; margin-left: 388px; margin-top: 125px;"id="myImage1" src="images/redn.jpg" style="width:20px" width="5" height="70">
+        <img style="position: absolute; margin-left: 388px; margin-top: 230px;"id="myImage2" src="images/redn.jpg" style="width:20px" width="5" height="70">
+        <img style="position: absolute; margin-left: 390px; margin-top: 125px;"id="myImage3" src="images/redn.jpg" style="width:20px" width="68" height="5"> 
+        <img style="position: absolute; margin-left: 500px; margin-top: 125px;"id="myImage4" src="images/redn.jpg" style="width:20px" width="60" height="5"> 
+        <img style="position: absolute; margin-left: 560px; margin-top: 125px;"id="myImage5" src="images/redn.jpg" style="width:20px" width="5" height="80"> 
+        <img style="position: absolute; margin-left: 560px; margin-top: 221px;"id="myImage6" src="images/redn.jpg" style="width:20px" width="5" height="84"> 
+        <img style="position: absolute; margin-left: 388px; margin-top: 300px;"id="myImage7" src="images/redn.jpg" style="width:20px" width="175" height="5">
+
+        <img style="position: absolute; margin-left: 565px; margin-top: 125px;"id="myImage8" src="images/redn.jpg" style="width:20px" width="68" height="5">
+        <img style="position: absolute; margin-left: 670px; margin-top: 125px;"id="myImage9" src="images/redn.jpg" style="width:20px" width="68" height="5">
+        <img style="position: absolute; margin-left: 735px; margin-top: 125px;"id="myImage10" src="images/redn.jpg" style="width:20px" width="5" height="63">
+        <img style="position: absolute; margin-left: 735px; margin-top: 241px;"id="myImage11" src="images/redn.jpg" style="width:20px" width="5" height="64">
+        <img style="position: absolute; margin-left: 565px; margin-top: 300px;"id="myImage12" src="images/redn.jpg" style="width:20px" width="171" height="5">
+        
+
+        <div style="position:absolute;margin-left:450px; margin-top:110px;">
+
+          <img id="Switch1"   onclick="changeImage1()" src="images/switchoff.png" width="60" height="35" style="cursor:pointer;">  
+
+        </div> 
+        
+        <div style="position:absolute;margin-left:622px; margin-top:110px;">
+
+           <img id="Switch2" onclick="changeImage2()" src="images/switchoff.png" width="60" height="35" style="cursor:pointer;">
+
+        </div>
+       
+        <div style="position:absolute;margin-left:532px; margin-top:180px;">
+            <img id="myImage13" src="images/cap.png" width="60" height="65">
+        </div> 
+        
+       <div style="position:absolute; margin-left: 723px; margin-top: 175px;">
+            <img src="images/RES.png" width="25" height="80">
+       </div>
+
+       <!-- Circuit text -->
+       <b> <p style="position:absolute; color:red; margin-left:590px; margin-top:200px; font-size: 22px;">C</p></b>
+       <b> <p style="position:absolute; color:red; margin-left:750px; margin-top:200px; font-size: 21px;">R</p></b>
+       <b> <p style="position:absolute; color:blue; margin-left:445px; margin-top:80px; font-size: 21px;">Switch 1</p></b>
+       <b> <p style="position:absolute; color:blue; margin-left:615px; margin-top:80px; font-size: 21px;">Switch 2</p></b>
+       <b> <p style="position:absolute; color:blue; margin-left:460px; margin-top:320px; font-size: 21px;">CIRCUIT DIAGRAM</p></b>
+
+    
+       <!-- Connections -->
+       <div class="jtk-demo-main">
+        <!-- demo -->
+        <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
+          <div class="littledot" id="ld10"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld10" id="dis1">P<sub>1</sub></a></div>
+          <div class="littledot" id="ld11"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld11" id="dis2">P<sub>2</sub></a></div>
+          <div class="littledot" id="ld12"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld12" id="dis3">P<sub>3</sub></a></div>
+          <div class="littledot" id="ld13"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld13" id="dis4">P<sub>4</sub></a></div>
+           <div class="littledot" id="ld1"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld1" id="dis5">M<sub>1</sub></a></div>
+            
+            <div class="littledot" id="ld2"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld2" id="dis6">M<sub>2</sub></a></div>
+            <div class="littledot" id="ld5"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld5" id="dis7">M<sub>3</sub></a></div>
+            <div class="littledot" id="ld6"></br><a style="font-size: 20px; color: blue;"href="#" class="cmdLink detach" rel="ld6" id="dis8">M<sub>4</sub></a></div>
+
+          </div>
+
+      </div>
+    
+    </div>
+
+        <!-- Timer -->
+        <div id="timer_all">
+
+       <div id="timer">
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;font-size:20px;color: white;margin-top: 2px;margin-left: 50px; " > TIMER </p>
+       <div id="stopwatch" >00:00:00</div>
+      </div>
+        <ul id="buttons">
+            <li><button class="btn1" id="start" onclick="startTimer()" >START</button></li>
+            <!-- <li><button class="btn2" onclick="stopTimer()">STOP</button></li> -->
+            <!-- <li><button class="btn3" onclick="resetTimer()">RESET</button></li> -->
+        </ul>
+
+        </div>
+
+        
+    <!-- Multimeter Code start -->
+    <div style="position: absolute;" class="multimeter">
+      <img class="forbidden" src="images/multimeter1.jpg" id="M" height="230" width="152" alt="">
+      <img src="images/mpointer.png" id="P_M" height="230" width="152" alt="">
+      <div id="mm_display" ></div>
+      <b> <p style="position:absolute; color:red; margin-left:880px; margin-top:12px; font-size: 26px;">V</p></b> 
+    </div>
+    <!-- Multimeter Code ends -->
+
+
+<!-- Graph -->
+<div id="graph" ></div>
+
+        <!-- js -->
+        <script src="js/jsplumb1.js"></script>
+        <!-- /js -->
+
+        <!--  demo code -->
+        <script src="js/demo1.js"></script>
+
+<script src="../assets/js/iframeResize.js"></script></body>
+</html>
